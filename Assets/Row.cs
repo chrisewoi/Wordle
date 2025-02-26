@@ -20,6 +20,19 @@ public class Row : MonoBehaviour
         
     }
 
+    public void PushColor(int index, Color newColor)
+    {
+        cells[index].PushColor(newColor);
+    }
+
+    public void SetState(bool state)
+    {
+        foreach (Cell cell in cells)
+        {
+            cell.SetState(state);
+        }
+    }
+
     public string GetWord()
     {
         string word = "";
